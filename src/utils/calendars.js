@@ -51,7 +51,7 @@ export default class Calendars {
       'DTSTART:' + data.startDate,
       'DTEND:' + data.endDate,
       'LOCATION:' + Utils.formatIcsText(data.location, 64),
-      'ORGANIZER;CN=MyThrive:MAILTO:support@thrivepartners.co.uk ',
+      'ORGANIZER;CN=MyThrive:MAILTO:support@thrivepartners.co.uk',
       'SUMMARY:' + Utils.formatIcsText(data.title, 66),
       'URL;VALUE=URI:https://my.thrivepartners.co.uk',
       'END:VEVENT',
