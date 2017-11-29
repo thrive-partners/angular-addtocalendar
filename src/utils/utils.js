@@ -114,6 +114,6 @@ export default class Utils {
    * @return {String}
    */
   static getTimeCreated() {
-    return new moment().format('YYYYMMDDTHHmmss');
+    return new moment().format('YYYYMMDDTHHmmssZ');
   }
 }

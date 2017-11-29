@@ -38,19 +38,24 @@ export default class Calendars {
     return [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
+      'PRODID:angular-addtocalendar',
+      'CALSCALE:GREGORIAN',
       'BEGIN:VEVENT',
-      'CLASS:PUBLIC',
+      'UID:' + Utils.getUid(),
+      'DTSTAMP:' + Utils.getTimeCreated(),
+      'BEGIN:VALARM',
+      'TRIGGER:-PT15M',
+      'ACTION:DISPLAY',
+      'END:VALARM',
       'DESCRIPTION:' + Utils.formatIcsText(data.description, 62),
       'DTSTART:' + data.startDate,
       'DTEND:' + data.endDate,
       'LOCATION:' + Utils.formatIcsText(data.location, 64),
+      'ORGANIZER;CN=MyThrive:MAILTO:support@thrivepartners.co.uk ',
       'SUMMARY:' + Utils.formatIcsText(data.title, 66),
-      'TRANSP:TRANSPARENT',
+      'URL;VALUE=URI:https://my.thrivepartners.co.uk',
       'END:VEVENT',
-      'END:VCALENDAR',
-      'UID:' + Utils.getUid(),
-      'DTSTAMP:' + Utils.getTimeCreated(),
-      'PRODID:angular-addtocalendar'
+      'END:VCALENDAR'
     ].join('\n');
   }
 }
