@@ -42,7 +42,7 @@ export default class Calendars {
       'CALSCALE:GREGORIAN',
       'BEGIN:VEVENT',
       'UID:' + Utils.getUid(),
-      'DTSTAMP:' + Utils.getTimeCreated(),
+      'DTSTAMP:' + Utils.getTimeCreated() + 'Z',
       'BEGIN:VALARM',
       'TRIGGER:-PT15M',
       'ACTION:DISPLAY',
