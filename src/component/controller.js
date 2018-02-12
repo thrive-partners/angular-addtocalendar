@@ -60,7 +60,6 @@ export default class AddtocalendarCtrl {
   }
 
   openLink(url) {
-    console.log(url);
     window.open(url, '_blank');
   }
 
