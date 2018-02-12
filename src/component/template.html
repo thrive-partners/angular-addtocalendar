@@ -5,7 +5,7 @@
   }"
   title="{{ addtocalendar.hoverText || addtocalendar.title }}"
   click-outside="addtocalendar.toggleMenu(false)">
-  
+
   <span
     type="button"
     ng-class="{
@@ -32,8 +32,7 @@
     </li>
     <li>
       <a
-        href="{{addtocalendar.calendarUrl.google}}"
-        target="_blank">
+        ng-click="addtocalendar.openLink(addtocalendar.calendarUrl.google)">
         Google Calendar
       </a>
     </li>
@@ -46,15 +45,13 @@
     </li>
     <li>
       <a
-        href="{{addtocalendar.calendarUrl.yahoo}}"
-        target="_blank">
+        ng-click="addtocalendar.openLink(addtocalendar.calendarUrl.yahoo)">
         Yahoo! Calendar
       </a>
     </li>
     <li>
       <a
-        href="{{addtocalendar.calendarUrl.microsoft}}"
-        target="_blank">
+        ng-click="addtocalendar.openLink(addtocalendar.calendarUrl.microsoft)">
         Microsoft Calendar
       </a>
     </li>

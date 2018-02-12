@@ -4,8 +4,9 @@ import bindings from './bindings';
 
 export default class AddtocalendarCtrl {
 
-  constructor($attrs, FileSaver) {
+  constructor($attrs, FileSaver, $window) {
     this.FileSaver = FileSaver;
+    this.window = $window;
     this.dates = {};
     this.init.call(this);
     this.watchAttrs.call(this, $attrs);
@@ -58,6 +59,11 @@ export default class AddtocalendarCtrl {
     this.FileSaver.saveAs(icsBlob, fileName);
   }
 
+  openLink(url) {
+    console.log(url);
+    window.open(url, '_blank');
+  }
+
   toggleMenu(isOpen) {
     this.isOpen = isOpen;
   }
@@ -68,4 +74,4 @@ export default class AddtocalendarCtrl {
   }
 }
 
-AddtocalendarCtrl.$inject = ['$attrs', 'FileSaver'];
+AddtocalendarCtrl.$inject = ['$attrs', 'FileSaver', '$window'];
