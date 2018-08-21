@@ -47,7 +47,7 @@ export default class Calendars {
       'TRIGGER:-PT15M',
       'ACTION:DISPLAY',
       'END:VALARM',
-      'DESCRIPTION:' + Utils.formatIcsText(data.description, 62),
+      'DESCRIPTION:' + Utils.formatIcsText(data.description, 255),
       'DTSTART:' + data.startDate,
       'DTEND:' + data.endDate,
       'LOCATION:' + Utils.formatIcsText(data.location, 64),
