@@ -43,7 +43,6 @@ export default class AddtocalendarCtrl {
         icsData = angular.extend({}, this, this.dates);
 
     this.calendarUrl = {
-      microsoft: Calendars.getMicrosoftCalendarUrl(urlData),
       google:    Calendars.getGoogleCalendarUrl(urlData),
       yahoo:     Calendars.getYahooCalendarUrl(urlData),
       icalendar: Calendars.getIcsCalendar(icsData),
